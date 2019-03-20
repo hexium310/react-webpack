@@ -1,26 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
+import { Hello } from './Hello';
 
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
-
-const Content = styled.div`
-  text-align: center;
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 export const App: React.FunctionComponent = (): React.ReactElement => {
   return (
-    <Wrapper>
-      <Title>App Component</Title>
-      <Content>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</Content>
-    </Wrapper>
+    <>
+      <GlobalStyle />
+      <Hello title="Hello Component" />
+    </>
   )
 };
