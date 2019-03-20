@@ -1,14 +1,14 @@
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const loaders = {
-  babel: {
-    loader: 'babel-loader',
+  typescript: {
+    loader: 'ts-loader',
   },
-}
+};
 
-export default {
-  entry: './src/index.js',
+module.exports = {
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -16,14 +16,14 @@ export default {
   module: {
     rules: [
       {
-        test: /.jsx?$/,
+        test: /.tsx?$/,
         exclude: /node_modules/,
-        use: loaders.babel,
+        use: loaders.typescript,
       }
     ]
   },
   resolve: {
-    extensions: ['.js', 'jsx']
+    extensions: ['.js', '.ts', '.tsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -31,4 +31,4 @@ export default {
       filename: 'index.html',
     }),
   ],
-}
+};
