@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "watch": "webpack-dev-server --mode development",
     "start": "yarn watch",
-    "lint": "eslint 'src/**/*.{ts,tsx}'"
+    "lint": "eslint '**/*.{js,ts,tsx}' --ignore-path .gitignore"
   },
   "devDependencies": {
     "@types/react": "^16.8.17",

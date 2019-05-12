@@ -12,6 +12,7 @@
   },
   "env": {
     "es6": true,
+    "node": true,
     "browser": true
   },
   "extends": [
@@ -20,9 +21,37 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
+    "no-extra-boolean-cast": "off",
+    "object-curly-spacing": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "block-spacing": "error",
+    "comma-dangle": ["error", "always-multiline"],
     "@typescript-eslint/indent": ["error", 2],
-    "react/prop-types": "off"
+    "@typescript-eslint/camelcase": [
+      "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "react/prop-types": "off",
+    "react/jsx-curly-spacing": ["error", "always"]
   },
+  "overrides": [
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"

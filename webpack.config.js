@@ -19,8 +19,8 @@ module.exports = {
         test: /.tsx?$/,
         exclude: /node_modules/,
         use: loaders.typescript,
-      }
-    ]
+      },
+    ],
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
