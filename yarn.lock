@@ -146,7 +146,7 @@
   dependencies:
     "@typescript-eslint/typescript-estree" "1.8.0"
 
-"@typescript-eslint/parser@1.8.0":
+"@typescript-eslint/parser@1.8.0", "@typescript-eslint/parser@^1.8.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-1.8.0.tgz#994c9923b3406e71f58f8f0cce40e8770834b416"
   integrity sha512-3SK++gL2ndV/X7jlceiaRfHww7/JVguxFKMSF7k8iNXflR+oSucfRacReXuwVcNy09aepgDD/MCMJo/7Eh/GVg==
