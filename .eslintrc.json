@@ -21,6 +21,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
+    "semi": ["error", "always"],
     "no-extra-boolean-cast": "off",
     "object-curly-spacing": ["error", "always"],
     "arrow-parens": ["error", "always"],
