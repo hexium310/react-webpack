@@ -5,14 +5,20 @@
     "module": "esnext",
     "target": "es6",
     "jsx": "react",
+    "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "resolveJsonModule": true
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "./src/**/*"
   ]
