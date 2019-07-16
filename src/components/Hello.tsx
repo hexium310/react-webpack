@@ -27,7 +27,7 @@ const Button = styled.button`
 
 export const Hello: React.FunctionComponent<HelloProps> = ({
   title,
-}): React.ReactElement => {
+}) => {
   const [number, setNumber] = React.useState(0);
 
   return (

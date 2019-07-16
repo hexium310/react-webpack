@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const App: React.FunctionComponent = (): React.ReactElement => {
+export const App: React.FunctionComponent = () => {
   return (
     <>
       <GlobalStyle />
