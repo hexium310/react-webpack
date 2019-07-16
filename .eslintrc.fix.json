@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": [
+    "./.eslintrc.config.json"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "block-spacing": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "@typescript-eslint/indent": ["error", 2],
+    "react/jsx-curly-spacing": ["error", "always"]
+  }
+}
