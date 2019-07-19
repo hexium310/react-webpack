@@ -1,7 +1,21 @@
 {
   "root": true,
+  "plugins": ["@typescript-eslint", "react"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
   "extends": [
-    "./.eslintrc.config.json",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
@@ -13,7 +27,6 @@
     "arrow-parens": ["error", "always"],
     "block-spacing": "error",
     "comma-dangle": ["error", "always-multiline"],
-    "no-multiple-empty-lines": ["error", { "max": 1 }],
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/camelcase": [
       "error",
@@ -39,5 +52,10 @@
         "@typescript-eslint/no-var-requires": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
