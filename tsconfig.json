@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "data/*": ["data/*"]
+    },
     "sourceMap": true,
     "module": "esnext",
     "target": "es6",
