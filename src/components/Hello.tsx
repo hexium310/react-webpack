@@ -36,5 +36,5 @@ export const Hello: React.FunctionComponent<HelloProps> = ({
       <Content>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</Content>
       <Button onClick={ () => setNumber(number + 1) }>{ number }</Button>
     </Wrapper>
-  )
+  );
 };

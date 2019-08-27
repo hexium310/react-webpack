@@ -15,5 +15,5 @@ export const App: React.FunctionComponent = () => {
       <GlobalStyle />
       <Hello title="Hello Component" />
     </>
-  )
+  );
 };
