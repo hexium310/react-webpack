@@ -3,8 +3,7 @@
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "data/*": ["data/*"]
+      "components/*": ["src/components/*"]
     },
     "sourceMap": true,
     "module": "esnext",
