@@ -33,11 +33,15 @@ export const Hello: React.FunctionComponent<HelloProps> = ({
   const classes = useStyles();
   const [number, setNumber] = React.useState(0);
 
+  const handleClick = React.useCallback(() => {
+    setNumber((n) => n + 1);
+  }, []);
+
   return (
     <section className={ classes.wrapper }>
       <div className={ classes.title }>{ title }</div>
       <div className={ classes.content }>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</div>
-      <button className={ classes.button } onClick={ () => setNumber(number + 1) }>{ number }</button>
+      <button className={ classes.button } onClick={ handleClick }>{ number }</button>
     </section>
   );
 };
