@@ -1,19 +1,20 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { createStyles, makeStyles } from '@material-ui/styles';
 
 import { Hello } from 'components/Hello';
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
-`;
+const useStyles = makeStyles(() => createStyles({
+  root: {
+    boxSizing: 'border-box',
+  },
+}));
 
 export const App: React.FunctionComponent = () => {
+  const classes = useStyles();
+
   return (
-    <>
-      <GlobalStyle />
+    <div className={ classes.root }>
       <Hello title="Hello Component" />
-    </>
+    </div>
   );
 };

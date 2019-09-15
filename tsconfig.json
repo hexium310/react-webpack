@@ -3,8 +3,10 @@
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"]
+      "components/*": ["src/components/*"],
+      "theme": ["src/theme"]
     },
+    "typeRoots": ["typings"],
     "sourceMap": true,
     "module": "esnext",
     "target": "es6",

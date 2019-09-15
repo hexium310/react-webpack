@@ -1,40 +1,43 @@
 import React from 'react';
-import styled from 'styled-components';
+import { createStyles, makeStyles } from '@material-ui/styles';
+
+import { Theme } from 'theme';
 
 interface HelloProps {
   title: string;
 }
 
-const Wrapper = styled.section`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 4em;
-  background: papayawhip;
-`;
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  color: palevioletred;
-`;
-
-const Content = styled.div`
-`;
-
-const Button = styled.button`
-  margin-top: 10px;
-`;
+const useStyles = makeStyles((theme: Theme) => createStyles({
+  wrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: 'papayawhip',
+    padding: theme.spacing(16),
+  },
+  title: {
+    fontSize: '1.5em',
+    color: theme.palette.primary.main,
+  },
+  content: {
+    color: theme.palette.secondary.main,
+  },
+  button: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 export const Hello: React.FunctionComponent<HelloProps> = ({
   title,
 }) => {
+  const classes = useStyles();
   const [number, setNumber] = React.useState(0);
 
   return (
-    <Wrapper>
-      <Title>{ title }</Title>
-      <Content>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</Content>
-      <Button onClick={ () => setNumber(number + 1) }>{ number }</Button>
-    </Wrapper>
+    <section className={ classes.wrapper }>
+      <div className={ classes.title }>{ title }</div>
+      <div className={ classes.content }>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</div>
+      <button className={ classes.button } onClick={ () => setNumber(number + 1) }>{ number }</button>
+    </section>
   );
 };
