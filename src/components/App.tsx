@@ -1,20 +1,20 @@
+/** @jsx jsx */
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/styles';
+import { css, jsx, Global } from '@emotion/core';
 
 import { Hello } from 'components/Hello';
 
-const useStyles = makeStyles(() => createStyles({
-  root: {
+const globalStyle = css({
+  '*': {
     boxSizing: 'border-box',
   },
-}));
+});
 
 export const App: React.FunctionComponent = () => {
-  const classes = useStyles();
-
   return (
-    <div className={ classes.root }>
+    <React.Fragment>
+      <Global styles={ globalStyle }/>
       <Hello title="Hello Component" />
-    </div>
+    </React.Fragment>
   );
 };

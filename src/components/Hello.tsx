@@ -1,36 +1,35 @@
+/** @jsx jsx */
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/styles';
-
-import { Theme } from 'theme';
+import { css, jsx } from '@emotion/core';
 
 interface HelloProps {
   title: string;
 }
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
-  wrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    backgroundColor: 'papayawhip',
-    padding: theme.spacing(16),
-  },
-  title: {
-    fontSize: '1.5em',
-    color: theme.palette.primary.main,
-  },
-  content: {
-    color: theme.palette.secondary.main,
-  },
-  button: {
-    marginTop: theme.spacing(2),
-  },
-}));
+const wrapperStyle = css({
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  backgroundColor: 'papayawhip',
+  padding: 4 * 16,
+});
+
+const titleStyle = css({
+  fontSize: '1.5em',
+  color: '#3f51b5',
+});
+
+const contentStyle = css({
+  color: '#f50057',
+});
+
+const buttonStyle = css({
+  marginTop: 4 * 2,
+});
 
 export const Hello: React.FunctionComponent<HelloProps> = ({
   title,
 }) => {
-  const classes = useStyles();
   const [number, setNumber] = React.useState(0);
 
   const handleClick = React.useCallback(() => {
@@ -38,10 +37,10 @@ export const Hello: React.FunctionComponent<HelloProps> = ({
   }, []);
 
   return (
-    <section className={ classes.wrapper }>
-      <div className={ classes.title }>{ title }</div>
-      <div className={ classes.content }>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</div>
-      <button className={ classes.button } onClick={ handleClick }>{ number }</button>
+    <section css={ wrapperStyle }>
+      <div css={ titleStyle }>{ title }</div>
+      <div css={ contentStyle }>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</div>
+      <button css={ buttonStyle } onClick={ handleClick }>{ number }</button>
     </section>
   );
 };
