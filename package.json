@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "watch": "webpack serve --mode development",
+    "watch": "TSC_WATCHFILE=UseFsEventsWithFallbackDynamicPolling webpack serve --mode development",
     "start": "yarn watch",
     "lint": "eslint '**/*.{js,ts,tsx}' --ignore-path .gitignore"
   },
@@ -20,6 +20,7 @@
     "babel-loader": "^8.1.0",
     "eslint": "^7.11.0",
     "eslint-plugin-react": "^7.21.5",
+    "fork-ts-checker-webpack-plugin": "^5.2.0",
     "html-webpack-plugin": "^5.0.0-alpha.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

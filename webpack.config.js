@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const loaders = {
   babel: {
@@ -12,6 +13,9 @@ const loaders = {
   },
   typescript: {
     loader: 'ts-loader',
+    options: {
+      transpileOnly: true,
+    },
   },
 };
 
@@ -47,6 +51,9 @@ module.exports = (_, argv) => {
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
+      }),
+      new ForkTsCheckerWebpackPlugin({
+        async: isDevelopment,
       }),
     ].filter(Boolean),
     devServer: {
