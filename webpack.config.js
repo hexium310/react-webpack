@@ -22,6 +22,7 @@ const loaders = {
         ident: 'postcss',
         plugins: [
           new TailwindCSS(),
+          require('postcss-nested'),
         ],
       },
     },
