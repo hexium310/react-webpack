@@ -54,6 +54,14 @@ module.exports = (_, argv) => {
       }),
       new ForkTsCheckerWebpackPlugin({
         async: isDevelopment,
+        typescript: {
+          configOverwrite: {
+            compilerOptions: {
+              noUnusedLocals: false,
+              sourceMap: false,
+            },
+          },
+        },
       }),
     ].filter(Boolean),
     devServer: {
