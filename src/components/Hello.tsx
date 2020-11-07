@@ -1,31 +1,9 @@
-/** @jsx jsx */
 import React from 'react';
-import { css, jsx } from '@emotion/core';
+import cntl from 'cntl';
 
 interface HelloProps {
   title: string;
 }
-
-const wrapperStyle = css({
-  display: 'flex',
-  alignItems: 'center',
-  flexDirection: 'column',
-  backgroundColor: 'papayawhip',
-  padding: 4 * 16,
-});
-
-const titleStyle = css({
-  fontSize: '1.5em',
-  color: '#3f51b5',
-});
-
-const contentStyle = css({
-  color: '#f50057',
-});
-
-const buttonStyle = css({
-  marginTop: 4 * 2,
-});
 
 export const Hello: React.FunctionComponent<HelloProps> = ({
   title,
@@ -37,10 +15,10 @@ export const Hello: React.FunctionComponent<HelloProps> = ({
   }, []);
 
   return (
-    <section css={ wrapperStyle }>
-      <div css={ titleStyle }>{ title }</div>
-      <div css={ contentStyle }>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</div>
-      <button css={ buttonStyle } onClick={ handleClick }>{ number }</button>
+    <section className={ cntl`bg-gray-400 bg-opacity-25 flex flex-col items-center p-16` }>
+      <div className={ cntl`text-2xl text-blue-600` }>{ title }</div>
+      <div className={ cntl`text-red-600` }>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</div>
+      <button className={ cntl`bg-white border border-black border-solid mt-2 px-5 py-1 rounded` } onClick={ handleClick }>{ number }</button>
     </section>
   );
 };
