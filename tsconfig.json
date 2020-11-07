@@ -6,7 +6,6 @@
       "components/*": ["src/components/*"],
       "theme": ["src/theme"]
     },
-    "typeRoots": ["typings"],
     "sourceMap": true,
     "module": "esnext",
     "target": "es6",
@@ -27,8 +26,6 @@
     "node_modules"
   ],
   "include": [
-    "**/*.js",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*"
   ]
 }
