@@ -24,7 +24,7 @@
     "fork-ts-checker-webpack-plugin": "^6.0.0",
     "html-webpack-plugin": "^5.0.0-alpha.6",
     "nodemon": "^2.0.6",
-    "postcss": "^8.1.6",
+    "postcss": "^8.2.10",
     "postcss-loader": "^4.0.4",
     "postcss-nested": "^5.0.1",
     "react": "^17.0.1",
