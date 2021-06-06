@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState, useCallback, ReactElement, FC, MouseEvent } from 'react';
 import cntl from 'cntl';
 
 import Pangram from 'components/Pangram';
 
-const Dutch: React.ReactElement = <Pangram>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</Pangram>;
-const English: React.ReactElement = <Pangram>The quick brown fox jumps over the lazy dog.</Pangram>;
-const Japanese: React.ReactElement = (
+const Dutch: ReactElement = <Pangram>Pa&apos;s wijze lynx bezag vroom het fikse aquaduct.</Pangram>;
+const English: ReactElement = <Pangram>The quick brown fox jumps over the lazy dog.</Pangram>;
+const Japanese: ReactElement = (
   <Pangram textDirection="veritical">
     <p>いろはにほへと</p>
     <p>ちりぬるをわか</p>
@@ -17,7 +17,7 @@ const Japanese: React.ReactElement = (
   </Pangram>
 );
 
-const pangrams: { [s: string]: { component: React.ReactElement, native: string } } = {
+const pangrams: { [s: string]: { component: ReactElement, native: string } } = {
   dutch: {
     component: Dutch,
     native: 'Nederlands',
@@ -32,10 +32,10 @@ const pangrams: { [s: string]: { component: React.ReactElement, native: string }
   },
 };
 
-const Content: React.FC = () => {
-  const [language, setLanguage] = React.useState('english');
+const Content: FC = () => {
+  const [language, setLanguage] = useState('english');
 
-  const changeLanguage= React.useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
+  const changeLanguage= useCallback((event: MouseEvent<HTMLButtonElement>) => {
     setLanguage(event.currentTarget.value);
   }, []);
 

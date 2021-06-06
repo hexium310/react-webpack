@@ -1,11 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import cntl from 'cntl';
 
 interface TitleProps {
   title: string;
 }
 
-const Title: React.FC<TitleProps> = ({
+const Title: FC<TitleProps> = ({
   title,
 }) => {
   return (
