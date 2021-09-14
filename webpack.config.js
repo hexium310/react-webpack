@@ -91,13 +91,10 @@ module.exports = (_, argv) => {
       }),
     ].filter(Boolean),
     devtool: isDevelopment ? 'source-map' : false,
-    devServer: {
-      hot: true,
-      stats: {
-        children: false,
-        modules: false,
-        colors: true,
-      },
+    stats: {
+      children: false,
+      modules: false,
+      colors: true,
     },
   };
 };
