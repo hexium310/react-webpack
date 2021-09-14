@@ -8,7 +8,7 @@ type PangramProps = {
 const Pangram: FC<PangramProps> = ({ textDirection = 'horizontal', children }) => {
   return (
     <div className={ cntl`
-      ${textDirection === 'horizontal' ? 'horizontal-writing' : 'vertical-writing'}
+      ${ textDirection === 'horizontal' ? 'horizontal-writing' : 'vertical-writing' }
     ` }>
       { children }
     </div>

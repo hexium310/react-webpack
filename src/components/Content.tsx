@@ -47,7 +47,7 @@ const Content: FC = () => {
             <button
               key={ lang }
               className={ cntl`
-                ${lang === language ? 'bg-blue-200' : ''}
+                ${ lang === language ? 'bg-blue-200' : '' }
                 button
               ` }
               value={ lang }

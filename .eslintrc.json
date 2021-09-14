@@ -23,6 +23,7 @@
     "semi": ["error", "always"],
     "no-extra-boolean-cast": "off",
     "object-curly-spacing": ["error", "always"],
+    "template-curly-spacing": ["error", "always"],
     "arrow-parens": ["error", "always"],
     "block-spacing": "error",
     "comma-dangle": ["error", "always-multiline"],
